@@ -1,0 +1,13 @@
+description: >
+  Test an ansible role
+usage:
+  version: 2.1
+  orbs:
+    molecule: mtpettyp/molecule-orb@1.0.0
+  workflows:
+    test:
+      jobs:
+        - molecule/test:
+            role_name: my-ansible-role
+
+
