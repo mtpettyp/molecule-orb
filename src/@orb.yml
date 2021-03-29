@@ -3,6 +3,6 @@ version: 2.1
 description: >
   Test a Molecule-based Ansible role in CircleCI
 display:
-  home_url: "https://circleci.com/orbs/registry/orb/mtpettyp/molecule-orb"
+  home_url: "https://circleci.com/orbs/registry/orb/mtpettyp/molecule"
   source_url: "https://www.github.com/mtpettyp/molecule-orb"
 

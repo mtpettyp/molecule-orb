@@ -1,6 +1,6 @@
 # Molecule Orb
 
-[![CircleCI Build Status](https://circleci.com/gh/mtpettyp/molecule-orb.svg?style=shield "CircleCI Build Status")](https://circleci.com/gh/mtpettyp/molecule-orb) [![CircleCI Orb Version](https://badges.circleci.com/orbs/mtpettyp/molecule-orb.svg)](https://circleci.com/developer/orbs/orb/mtpettyp/molecule-orb) [![GitHub License](https://img.shields.io/badge/license-MIT-lightgrey.svg)](https://raw.githubusercontent.com/mtpettyp//master/LICENSE)
+[![CircleCI Build Status](https://circleci.com/gh/mtpettyp/molecule-orb.svg?style=shield "CircleCI Build Status")](https://circleci.com/gh/mtpettyp/molecule-orb) [![CircleCI Orb Version](https://badges.circleci.com/orbs/mtpettyp/molecule.svg)](https://circleci.com/developer/orbs/orb/mtpettyp/molecule) [![GitHub License](https://img.shields.io/badge/license-MIT-lightgrey.svg)](https://raw.githubusercontent.com/mtpettyp//master/LICENSE)
 
 A simple CircleCI Orb for running [Molecule](https://molecule.readthedocs.io/en/latest/) tests.
 
