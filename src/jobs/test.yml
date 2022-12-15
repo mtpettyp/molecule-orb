@@ -3,7 +3,7 @@ description: >
 parameters:
   machine_image:
     type: string
-    default: ubuntu-2004:202101-01
+    default: ubuntu-2204:current
     description: Machine image to use
   role_name:
     type: string
@@ -11,25 +11,21 @@ parameters:
 machine:
   image: "<< parameters.machine_image >>"
 working_directory: "~/<< parameters.role_name >>"
+environment:
+  POETRY_VIRTUALENVS_PATH: ~/venv
 steps:
   - checkout
   - restore_cache:
-      key: deps-{{ .Branch }}-{{ checksum "requirements.txt" }}
+      key: deps-{{ .Branch }}-{{ checksum "poetry.lock" }}
   - run:
-      name: Create virtualenv
-      command: |
-        cd ~
-        python3 -m virtualenv ~/venv
+      name: Install poetry
+      command: pip install poetry
   - run:
       name: Install python dependencies
-      command: |
-        . ~/venv/bin/activate
-        pip3 install -r requirements.txt
+      command: poetry install --no-root
   - save_cache:
-      key: deps-{{ .Branch }}-{{ checksum "requirements.txt" }}
+      key: deps-{{ .Branch }}-{{ checksum "poetry.lock" }}
       paths:
         - "~/venv"
   - run:
-      command: |
-        . ~/venv/bin/activate
-        molecule test
+      command: poetry molecule test
